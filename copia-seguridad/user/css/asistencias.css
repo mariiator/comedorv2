@@ -1,0 +1,13 @@
+.botones > div{
+	margin: 20px 0px 0px 0px;
+}
+.centrado{
+	width: 50%;
+	text-align: center;
+}
+.container{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

@@ -1,0 +1,24 @@
+table, th, td {
+  	border: 1px solid;
+}
+#meses{
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 10px;
+}
+#etapas{
+	margin: 20px 0px 10px 0px;
+	width: 1000px;
+}
+#clases{
+	margin: 20px 0px 10px 0px;
+	width: 1000px;
+}
+#clase{
+	min-width: 50px;
+	height: 70px;
+}
+#tablas{
+	margin: 100px 0px 0px 0px;
+}

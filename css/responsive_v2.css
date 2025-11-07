@@ -1,0 +1,61 @@
+/* === COMEDOR V2 - Estilos responsive y visuales mejorados === */
+
+/* General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+/* Tarjetas de login o paneles */
+.card, #card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+}
+
+/* Títulos principales */
+h1, #titulo {
+  color: #007bff;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+/* Botones generales */
+button, .btn, #botonLogin, #botonProfe {
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+  font-weight: 500;
+}
+
+/* Botones juntos en login */
+#botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Formularios más cómodos en móvil */
+input, select {
+  max-width: 100%;
+  border-radius: 8px !important;
+}
+
+/* Contenedores más fluidos */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Ajustes responsive generales */
+@media (max-width: 768px) {
+  #botones {
+    flex-direction: column;
+  }
+  #botones > * {
+    width: 100%;
+  }
+}

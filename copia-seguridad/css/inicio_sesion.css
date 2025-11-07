@@ -1,0 +1,51 @@
+body{
+	background-image: url('/css/comedorPrueba.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: blue;
+}
+#card{
+	background-color: #E8E8E8;
+}
+#titulo{
+	text-align: center;
+	color: #F226D9;
+	text-shadow: 0.5px 1px 2px black;
+}
+#floatingInput{
+	opacity: .8;
+}
+#password-field{
+	opacity: .8;
+}
+.container {
+	width: 500px;
+}
+.password-wrapper {
+	position: relative;
+}
+.toggle-button {
+	display: inline-flex;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: unset;
+	right: 30px;
+	cursor: pointer;
+}
+.eye-icon {
+	width: 20px;
+	height: 20px;
+}
+#botonLogin{
+	width: 49%;
+}
+#botonProfe{
+	width: 49%;
+}
+#botones{
+	width: 100%;
+	display: inline-block;
+}

@@ -1,0 +1,115 @@
+/*.botones > div{
+	margin: 20px 0px 0px 0px;
+}
+.centrado{
+	width: 50%;
+	text-align: center;
+}
+.container{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}*/
+/* Fondo general */
+
+/* Contenedor principal */
+.container {
+	background: #ffffff;
+	padding: 40px 30px;
+	border-radius: 16px;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+	max-width: 700px;
+	width: 90%;
+	text-align: center;
+}
+
+/* Texto principal */
+.texto {
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: #004080;
+	margin-right: 5px;
+}
+
+/* Números de asistencias */
+label:not(.texto) {
+	font-weight: 600;
+	color: #333333;
+	margin-right: 5px;
+}
+
+/* Enlaces tipo botón (Ver listado) */
+.btn-link {
+	color: #007bff;
+	text-decoration: none;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+	color: #0056b3;
+	text-decoration: underline;
+}
+
+/* Botones inferiores */
+.botones {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 30px;
+}
+
+.botones input[type="submit"] {
+	min-width: 160px;
+	padding: 12px 25px;
+	border-radius: 10px;
+	font-size: 1.1rem;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+/* Botón Pasar lista */
+.botones input[name="Lista"] {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.botones input[name="Lista"]:hover {
+	background-color: #0056b3;
+	transform: scale(1.05);
+}
+
+/* Botón Volver */
+.botones input[name="Atras"] {
+	background-color: #28a745;
+	color: #fff;
+}
+
+.botones input[name="Atras"]:hover {
+	background-color: #1e7e34;
+	transform: scale(1.05);
+}
+
+/* Centrado del formulario */
+.centrado {
+	width: 100%;
+	text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.container {
+		padding: 30px 20px;
+	}
+
+	.botones {
+		flex-direction: column;
+	}
+
+	.botones input[type="submit"] {
+		width: 100%;
+	}
+}

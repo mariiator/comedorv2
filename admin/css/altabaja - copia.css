@@ -1,0 +1,145 @@
+.thumbnail {
+	margin-bottom: 0px;
+}
+.container-fluid{
+	height:100%;
+	display:table;
+	width: 100%;
+	padding: 0;
+}
+.row-fluid {
+	height: 100%; 
+	display:table-cell; 
+	vertical-align: middle;
+}
+.centering {
+	float:none;
+	margin:0 auto;
+}
+.container-main{
+	margin-top: 60px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.image {
+	min-height: 160px;
+	position: relative;
+}
+.image-overlap {
+	position:absolute;
+	width:100%;
+	height:100%;
+	min-height: 100%;
+	min-width: 100%;
+	text-align: center;
+	margin:auto;
+}
+.image-overlap img {
+	margin: auto;
+	display: block;
+}
+.bottom-overlap {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 20%;
+    padding: 5px;
+    text-align: center;
+}
+.transparent-back {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 1%, rgba(0, 0, 0, 0.4) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(1%, rgba(0, 0, 0, 0.4)), color-stop(100%, rgba(0, 0, 0, 0.4)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 1%, rgba(0, 0, 0, 0.4) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 1%, rgba(0, 0, 0, 0.4) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 1%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 1%, rgba(0, 0, 0, 0.4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#66000000', GradientType=0);
+    color: #fff;
+}
+table, th, td {
+  	border: 1px solid;
+}
+.noline td {
+	border: 1px solid black;
+	vertical-align:middle;
+	text-align: center;
+	color: black;
+}
+.noline th {
+	border: 1px solid black;
+	vertical-align:middle;
+	text-align: center;
+	color: black;
+}
+.dropdown-menu-scrollable {
+	max-height: 200px;
+	overflow-y: auto;
+}
+#clase{
+	min-width: 10px;
+	height: 100px;
+}
+#container{
+	width: 100%;
+}
+#copiar{
+	text-align: center;
+	color: white;
+	margin: 100px;
+}
+nav{
+	background-image: linear-gradient(180deg, #CD3997 0%, #92065F 100%);
+}
+h1{
+	margin:100px 0px 20px 0px;
+	text-align:center;
+	color:white;
+}
+#imagen{
+	height: 60px;
+	margin: 0px 0px 0px 10px;
+}
+#listadoA{
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(340px, 1fr));
+	grid-gap: 15px;
+	width: 85%;
+	margin: 0px 0px 0px 5%;
+}
+#listadoA > div{
+	height: 232px;
+	border-radius: 3%;
+	border: 1px solid white;
+}
+.card{
+	background-color: #E7E7E7;
+}
+#contenedor{
+	margin: 0px 0px 0px 20px;
+	text-align: center;
+}
+#boton{
+	margin: 10px;
+}
+#file{
+	margin: 10px;
+}
+body{
+    background-image: url('/comedorv2/css/fondo_administrador.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar .navbar-nav .nav-item:not(:last-child) .nav-separator {
+	display: block;
+    height: 40px;
+	border-right: 3px solid #fff;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navbar .navbar-nav .nav-item:first-child {
+	margin-left: 50px;
+}

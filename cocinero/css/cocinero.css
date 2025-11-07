@@ -1,0 +1,27 @@
+.container{
+	display: block;
+	margin: 200px auto;
+}
+#center{
+	display: block;
+	margin: 0 auto;
+}
+.form-group{
+	margin: 10px;
+}
+.botones{
+	text-align: center;
+}
+.botones > div{
+	margin: 10px;
+}
+#hijo{
+	text-align: center;
+}
+#alerta{
+	align-items: center;
+	text-align: center;
+}
+#mensaje{
+	color: green;
+}

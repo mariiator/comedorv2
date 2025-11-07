@@ -1,0 +1,58 @@
+3561 .START (2024-05-14 10:21:08) phpCAS-1.3.6 ****************** [CAS.php:468]
+3561 .=> phpCAS::client('2.0', 'login01.globaleduca.es', 443, '/mi010') [controlador_profesor.php:70]
+3561 .|    => CAS_Client::__construct('2.0', false, 'login01.globaleduca.es', 443, '/mi010', true) [CAS.php:357]
+3561 .|    |    Starting a new session d5259bc7b0ac00668f67be5ede8e0467af942666aeca67b3c58a36f435824229 [Client.php:932]
+3561 .|    |    Session is authenticated as: mi010pablo.beltran [Client.php:936]
+3561 .|    <= ''
+3561 .<= ''
+3561 .=> phpCAS::setNoCasServerValidation() [controlador_profesor.php:71]
+3561 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3561 .<= ''
+3561 .=> phpCAS::forceAuthentication() [controlador_profesor.php:72]
+3561 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3561 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3561 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3561 .|    |    |    |    user = `mi010pablo.beltran' [Client.php:1622]
+3561 .|    |    |    <= true
+3561 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1415]
+3561 .|    |    <= true
+3561 .|    |    no need to authenticate [Client.php:1282]
+3561 .|    <= true
+3561 .<= ''
+3561 .=> phpCAS::logout() [controlador_profesor.php:73]
+3561 .|    => CAS_Client::logout(array ()) [CAS.php:1450]
+3561 .|    |    Prepare redirect to : https://login01.globaleduca.es/mi010/logout [Client.php:1696]
+3561 .|    |    Destroying session : d5259bc7b0ac00668f67be5ede8e0467af942666aeca67b3c58a36f435824229 [Client.php:1698]
+3561 .|    |    Session terminated [Client.php:1702]
+3561 .|    |    exit()
+3561 .|    |    -
+3561 .|    -
+32AB .START (2024-05-14 10:22:25) phpCAS-1.3.6 ****************** [CAS.php:468]
+32AB .=> phpCAS::client('2.0', 'login01.globaleduca.es', 443, '/mi010') [controlador_profesor.php:70]
+32AB .|    => CAS_Client::__construct('2.0', false, 'login01.globaleduca.es', 443, '/mi010', true) [CAS.php:357]
+32AB .|    |    Starting a new session d5259bc7b0ac00668f67be5ede8e0467af942666aeca67b3c58a36f435824229 [Client.php:932]
+32AB .|    |    Session is not authenticated [Client.php:938]
+32AB .|    <= ''
+32AB .<= ''
+32AB .=> phpCAS::setNoCasServerValidation() [controlador_profesor.php:71]
+32AB .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+32AB .<= ''
+32AB .=> phpCAS::forceAuthentication() [controlador_profesor.php:72]
+32AB .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+32AB .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+32AB .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+32AB .|    |    |    |    no user found [Client.php:1635]
+32AB .|    |    |    <= false
+32AB .|    |    |    no ticket found [Client.php:1494]
+32AB .|    |    <= false
+32AB .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+32AB .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+32AB .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+32AB .|    |    |    |    |    Final URI: http://localhost/profesor/controlador/controlador_profesor.php [Client.php:3548]
+32AB .|    |    |    |    <= 'http://localhost/profesor/controlador/controlador_profesor.php'
+32AB .|    |    |    <= 'https://login01.globaleduca.es/mi010/login?service=http%3A%2F%2Flocalhost%2Fprofesor%2Fcontrolador%2Fcontrolador_profesor.php'
+32AB .|    |    |    Redirect to : https://login01.globaleduca.es/mi010/login?service=http%3A%2F%2Flocalhost%2Fprofesor%2Fcontrolador%2Fcontrolador_profesor.php [Client.php:1663]
+32AB .|    |    |    exit()
+32AB .|    |    |    -
+32AB .|    |    -
+32AB .|    -

@@ -1,0 +1,36 @@
+/*.form-group{
+	margin: 10px;
+}
+.botones{
+	margin: 100px;
+}
+.botones > div{
+	margin: 20px 0px 0px 0px;
+}*/
+
+.form-group {
+	margin: 10px 0;
+}
+
+.botones {
+	margin-top: 20px;
+}
+
+.botones > div {
+	margin-top: 10px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+th {
+	background-color: #f0f0f0;
+}

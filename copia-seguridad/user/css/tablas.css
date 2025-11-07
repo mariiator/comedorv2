@@ -1,0 +1,9 @@
+.form-group{
+	margin: 10px;
+}
+.botones{
+	margin: 100px;
+}
+.botones > div{
+	margin: 20px 0px 0px 0px;
+}

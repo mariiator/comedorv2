@@ -1,0 +1,155 @@
+/* === COMEDOR V2 - Estilos responsive y visuales mejorados === */
+
+/* ====== GENERAL ====== */
+body {
+	background: linear-gradient(135deg, #FA5EB1, #FF9FD1);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ====== TARJETAS ====== */
+.card, #card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 25px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ====== TÍTULOS ====== */
+h1, #titulo {
+  color: #007bff;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: none;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+/* ====== BOTONES ====== */
+button, .btn, #botonLogin, #botonProfe {
+  border-radius: 10px !important;
+  padding: 12px 24px !important;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, .btn:hover, #botonLogin:hover, #botonProfe:hover {
+  transform: scale(1.03);
+}
+
+/* ====== BOTONES AGRUPADOS ====== */
+#botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ====== FORMULARIOS ====== */
+input, select {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px !important;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* ====== CONTENEDORES ====== */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* ?? centra horizontalmente */
+  padding: 20px;
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+/* TABLETAS */
+@media (max-width: 992px) {
+  body {
+    padding: 25px;
+  }
+
+  .container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  h1, #titulo {
+    font-size: 1.75rem;
+  }
+}
+
+/* MÓVILES */
+@media (max-width: 768px) {
+  body {
+    padding: 15px; /* ?? más aire en los bordes */
+  }
+
+  #botones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #botones > * {
+    width: 100%;
+  }
+
+  .card, #card {
+    padding: 18px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h1, #titulo {
+    font-size: 1.5rem;
+  }
+
+  button, .btn {
+    font-size: 0.95rem;
+    padding: 10px !important;
+  }
+}
+
+/* TELÉFONOS PEQUEÑOS */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 8px;
+  }
+
+  .card, #card {
+    padding: 15px;
+  }
+
+  h1, #titulo {
+    font-size: 1.3rem;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding-top: 60px; /* margen superior general */
+  }
+}
+
