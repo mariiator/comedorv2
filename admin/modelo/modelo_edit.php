@@ -146,7 +146,7 @@ function mostrarTabla($cookie,$array){
 			foreach($array as $row){
 				$tabla .= "<tr><td><input type='text' name='nombre' value='".$row[1]."' /></td></tr>";
 			}
-			$tabla .= "</tbody></table><input type='submit' value='Update' name='Update' class='btn btn-warning btn-lg' /><input type='submit' value='Delete' name='Delete' class='btn btn-danger btn-lg' />";
+			$tabla .= "</tbody></table><input type='submit' value='Actualizar' name='Update' class='btn btn-warning btn-lg' /><input type='submit' value='Borrar' name='Delete' class='btn btn-danger btn-lg' />";
 		}elseif($cookie == "Clases"){ //SI LA COOKIE ES IGUAL A CLASES MOSTRARA LA SIGUIENTE TABLA
 			$tabla .= "<h1>Clase</h1><table class='table table-striped'><thead><tr><th>Nombre</th><th>Etapa</th></tr></thead><tbody>";
 			foreach($array as $row){
@@ -160,7 +160,7 @@ function mostrarTabla($cookie,$array){
 					}
 				}
 			}
-			$tabla .= "</select></td></tr></tbody></table><input type='submit' value='Update' name='Update' class='btn btn-warning btn-lg' /><input type='submit' value='Delete' name='Delete' class='btn btn-danger btn-lg' />";
+			$tabla .= "</select></td></tr></tbody></table><input type='submit' value='Actualizar' name='Update' class='btn btn-warning btn-lg' /><input type='submit' value='Borrar' name='Delete' class='btn btn-danger btn-lg' />";
 		}elseif($cookie == "Alumnos"){ //SI LA COOKIE ES IGUAL A ALUMNOS MOSTRARA LA SIGUIENTE TABLA
 			$tabla .= "<h1>Persona</h1><table class='table table-striped'><thead><tr><th>Nombre</th><th>Apellido 1</th><th>Apellido 2</th><th>Clase</th></tr></thead><tbody>";
 			foreach($array as $row){
@@ -174,13 +174,13 @@ function mostrarTabla($cookie,$array){
 					}
 				}
 			}
-			$tabla .= "</select></td></tr></tbody></table><input type='submit' value='Update' name='Update' class='btn btn-warning btn-lg' /><input type='submit' value='Delete' name='Delete' class='btn btn-danger btn-lg' />";
+			$tabla .= "</select></td></tr></tbody></table><input type='submit' value='Actualizar' name='Update' class='btn btn-warning btn-lg' /><input type='submit' value='Borrar' name='Delete' class='btn btn-danger btn-lg' />";
 		}elseif($cookie == "Profesores"){ //SI LA COOKIE ES IGUAL A ETAPAS MOSTRARA LA SIGUIENTE TABLA
 			$tabla .= "<h1>Profesor</h1><table class='table table-striped'><thead><tr><th>Correo</th><th>Nombre</th><th>Apellido 1</th><th>Apellido 2</th></tr></thead><tbody>";
 			foreach($array as $row){
 				$tabla .= "<tr><td><input type='text' name='correo' value='".$row[1]."' /></td><td><input type='text' name='nombre' value='".$row[2]."' /></td><td><input type='text' name='apellido1' value='".$row[3]."' /></td><td><input type='text' name='apellido2' value='".$row[4]."' /></td></tr>";
 			}
-			$tabla .= "</tbody></table><input type='submit' value='Update' name='Update' class='btn btn-warning btn-lg' /><input type='submit' value='Delete' name='Delete' class='btn btn-danger btn-lg' />";
+			$tabla .= "</tbody></table><input type='submit' value='Actualizar' name='Update' class='btn btn-warning btn-lg' /><input type='submit' value='Borrar' name='Delete' class='btn btn-danger btn-lg' />";
 		}
 	}else{
 		if($cookie == "Etapas"){ //SI LA COOKIE ES IGUAL A ETAPAS MOSTRARA LA SIGUIENTE TABLA

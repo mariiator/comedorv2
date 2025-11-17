@@ -37,7 +37,7 @@ if(isset($_COOKIE['etapa'])){
 		//OBTENGO LOS DIAS DONDE HAN ASISTIDO AL MENOS UN ALUMNO
 		$dias = obtenerDiasEntreSemana($mes,$anyo);
 		//OBTENGO EL VALOR DE LA TABLA QUE SE MOSTRARA EN LA VISTA
-		$listado = mostrarTabla($alumnos,$dias);
+		$listado = mostrarTabla($alumnos,$dias, $clase);
 		echo $listado;
 	}
 }

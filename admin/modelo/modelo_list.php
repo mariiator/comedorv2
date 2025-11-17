@@ -246,7 +246,7 @@ function obtenerDiasEntreSemana($mes, $anio) {
 	}
 }
 //FUNCION DONDE MUESTRO LA TABLA DEL LISTADO MENSUAL
-function mostrarTabla($alumnos,$diasSemana,$clase){
+/*function mostrarTabla($alumnos,$diasSemana,$clase){
     $tabla = "";
     if(!empty($diasSemana)){
     	$tabla .= "<table class='table table-striped' id='tablaClases'><thead><tr><th>$clase</th>";
@@ -281,6 +281,95 @@ function mostrarTabla($alumnos,$diasSemana,$clase){
         $tabla .= "</tbody></table>";
     }
     return $tabla;
+}*/
+
+function mostrarTabla($alumnos, $mes, $anio, $clase){
+  $tabla = "<h3>$clase</h3><div class='cards-container'>";
+  $numDias = cal_days_in_month(CAL_GREGORIAN, $mes, $anio);
+  $hoy = date('Y-m-d');
+
+  foreach($alumnos as $nombreAlumno => $fechas) {
+    $totalAsistencias = 0;
+    $totalFaltas = 0;
+    
+    $tabla .= "<div class='month-card card mb-3'>";
+    $tabla .= "<div class='card-header'>".htmlspecialchars($nombreAlumno)."</div>";
+    $tabla .= "<div class='card-body'>";
+    
+    // Cabecera de dias de la semana
+    $tabla .= "<div class='weekday-grid'>
+      <div class='weekday-header'>L</div>
+      <div class='weekday-header'>M</div>
+      <div class='weekday-header'>X</div>
+      <div class='weekday-header'>J</div>
+      <div class='weekday-header'>V</div>
+      <div class='weekday-header'>S</div>
+      <div class='weekday-header'>D</div>
+    </div>";
+
+    // Grid de días
+    $tabla .= "<div class='week-grid'>";
+    $firstW = (int)date('N', strtotime("$anio-$mes-01")); // 1=Lunes .. 7=Domingo
+    $emptyBefore = $firstW-1;
+
+    // Celdas vacías antes del primer día
+    for ($i = 0; $i < $emptyBefore; $i++) {
+      $tabla .= "<div class='day-cell day-empty'></div>";
+    }
+
+    // Días del mes
+    for ($d = 1; $d <= $numDias; $d++) {
+      $fechaStr = sprintf('%04d-%02d-%02d', $anio, $mes, $d);
+      $dow = (int)date('N', strtotime($fechaStr));
+      $isWeekend = ($dow>=6);
+      $isFuture = ($fechaStr > $hoy);
+
+      // Si el día aún no ha llegado ? vacío
+      if ($isFuture) {
+        $tabla .= "<div class='day-cell day-empty'>$d</div>";
+        continue;
+      }
+      
+      // Valor almacenado
+      $estado = $fechas[$fechaStr][0] ?? '';
+      
+      // Fines de semana y Festivps: siempre gris
+      if ($isWeekend || $estado == "") {
+        $cls = "day-wk";
+      }
+      // Días laborales
+      else {
+        if ($estado == "X") {
+          $cls = "day-ok";
+          $totalAsistencias++;
+        }
+        elseif ($estado == "A") {
+          $cls = "day-ko";
+          $totalFaltas++;
+        }
+        elseif ($estado == "NO ASISTE") {
+          $cls = "day-empty";
+        }
+        else {
+          $cls = "day-ko";
+          $totalFaltas++;
+        }
+      }
+
+      $tabla .= "<div class='day-cell $cls'>$d</div>";
+    }
+
+    $tabla .= "</div>"; // week-grid
+    
+    // Totales
+    $tabla .= "<div class='mt-2 text-end'>";
+    $tabla .= "<span class='badge bg-success me-1'>Asistencias: $totalAsistencias</span>";
+    $tabla .= "<span class='badge bg-danger'>Faltas: $totalFaltas</span>";
+    $tabla .= "</div>";
+    $tabla .= "</div></div>"; // card-body + card
+  }
+  $tabla .= "</div>"; // cards-container
+  return $tabla;
 }
 
 //FUNCION DONDE MUESTRO LA TABLA DEL RESUMEN MENSUAL
@@ -350,6 +439,7 @@ function mostrarTabla2($array){
 	}
 	return $tabla;
 }
+
 //FUNCION DONDE MUESTRO LA TABLA DEL LISTADO ASISTENCIAS
 function mostrarTabla3($array){
 	$tabla = "";

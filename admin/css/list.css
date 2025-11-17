@@ -15,7 +15,7 @@ table, th, td {
 	height: 70px;
 }
 #tablas{
-	margin: 80px 0px 0px 0px;
+	margin: 10px;
 	padding: 0px 10px 0px 10px;
 }
 #tablaClases{
@@ -30,10 +30,67 @@ nav{
 	margin: 0px 0px 0px 10px;
 }
 body{
-    background-image: url('/comedorv2/css/fondo_administrador.jpg');
+    background-image: url('/css/fondo_administrador.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: blue;
+}
+h1{
+	margin:50px 0px 20px 0px;
+	text-align:center;
+	color:white;
+}
+h3{
+	text-align:center;
+	color:white;
+}
+
+/* Contenedor de todas las cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;        /* espacio entre cards */
+  justify-content: center;
+}
+
+/* Cada card de alumno */
+.month-card {
+  width: 350px;
+}
+
+/* Grid de 7 columnas fijas: garantiza 7 días por fila */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 2.4rem);
+  grid-auto-rows: 2.4rem;
+  gap: .3rem;
+  justify-content: start;
+}
+.weekday-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 2.4rem);
+  gap: .3rem;
+  justify-content: start;
+  margin-bottom: .35rem;
+}
+.weekday-header { text-align: center; font-weight: 600; color: #6b7280; }
+.day-cell {
+  display: flex; align-items: center; justify-content: center;
+  border-radius: .35rem; font-weight: 500;
+}
+.day-empty { background: transparent; }
+.day-ok    { background: #198754; color: #fff; } /* verde */
+.day-ko    { background: #dc3545; color: #fff; } /* rojo (laborable sin asistencia) */
+.day-wk    { background: #9ca3af; color: #fff; } /* gris (fin de semana sin asistencia) */
+
+.month-header-badges .badge { font-size: .85rem; }
+/* Un poco más compacto en pantallas pequeñas */
+@media (max-width: 575.98px) {
+  .week-grid, .weekday-grid {
+    grid-template-columns: repeat(7, 2.1rem);
+    grid-auto-rows: 2.1rem;
+    gap: .25rem;
+  }
 }

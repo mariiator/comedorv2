@@ -3,7 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/comedorv2/db/db.php";
 //FUNCION DONDE REALIZA UNA CONSULTA SEGUN LA COOKIE
 function obtenerConsulta($cookie){
 	global $conexion;
-	$array;
+	$array = [];
 	$query;
 	if($cookie == "Etapas"){ //SI EL VALOR DE LA COOKIE ES ETAPAS
 		$query = "SELECT * FROM Etapa;";

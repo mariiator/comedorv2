@@ -1,61 +1,91 @@
-/* === COMEDOR V2 - Estilos responsive y visuales mejorados === */
+/* === COMEDOR V2 - Responsive Global === 
 
-/* General */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-}
-
-/* Tarjetas de login o paneles */
-.card, #card {
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  padding: 20px;
-}
-
-/* Títulos principales */
-h1, #titulo {
-  color: #007bff;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: none;
-}
-
-/* Botones generales */
-button, .btn, #botonLogin, #botonProfe {
-  border-radius: 10px !important;
-  padding: 10px 20px !important;
-  font-weight: 500;
-}
-
-/* Botones juntos en login */
-#botones {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-/* Formularios más cómodos en móvil */
-input, select {
-  max-width: 100%;
-  border-radius: 8px !important;
-}
-
-/* Contenedores más fluidos */
-.container {
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Ajustes responsive generales */
-@media (max-width: 768px) {
-  #botones {
-    flex-direction: column;
+/* ====== TABLETS ====== 
+@media (max-width: 992px) {
+  body {
+    padding: 15px;
   }
-  #botones > * {
+
+  .container {
+    max-width: 90%;
+    padding: 30px 20px;
+  }
+
+  h1, h2, #titulo {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .botones input,
+  #center,
+  button,
+  .btn {
+    width: 80%;
+    font-size: 1rem;
+    padding: 10px !important;
+  }
+}
+
+/* ====== M�VILES ====== 
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+    justify-content: center;
+    align-items: center; /* ?? centrado vertical 
+  }
+
+  .container {
     width: 100%;
+    max-width: 100%;
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  h1, h2, #titulo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .botones input,
+  #center,
+  button,
+  .btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 12px !important;
+  }
+
+  input, select, textarea {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  label, p, span {
+    font-size: 0.95rem;
   }
 }
+
+/* ====== TEL�FONOS MUY PEQUE�OS ====== 
+@media (max-width: 400px) {
+  h1, h2, #titulo {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 15px 10px;
+  }
+
+  .botones {
+    gap: 10px;
+  }
+
+  input, select, textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}*/

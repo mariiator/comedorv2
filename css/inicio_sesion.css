@@ -6,8 +6,12 @@ body{
 	background-attachment: fixed;
 	background-color: blue;
 }
-#card{
-	background-color: #E8E8E8;
+#card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 25px;
+  background-color: #E8E8E8;
+  transition: all 0.3s ease;
 }
 #titulo{
 	text-align: center;

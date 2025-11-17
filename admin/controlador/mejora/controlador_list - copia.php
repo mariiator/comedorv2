@@ -139,7 +139,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	    	//OBTENGO LOS DIAS ENTRE SEMANA DONDE HAN ASISTIDO AL MENOS ALGUN ALUMNO
 	    	$dias = obtenerDiasEntreSemana($mes,$anyo);
 	    	//OBTENGO EL VALOR DE LA TABLA QUE SE MOSTRARA EN LA VISTA
-	    	$listado = mostrarTabla($alumnos,$dias,$clase . " (" . $mes . ")" );
+	    	//$listado = mostrarTabla($alumnos,$dias,$clase . " (" . $mes . ")" );
+        $listado = mostrarTabla($alumnos, $mes, $anyo, $clase." (" .$mes.")" );
 	    }
     }elseif($cookie == "Resumen Mensual") { //SI EL VALOR DE LA COOKIE ES IGUAL A RESUMEN MENSUAL
     	//OBTENGO EL ARRAY QUE SE VA A MOSTRAR
@@ -172,7 +173,8 @@ if(isset($_COOKIE['etapa']) && !isset($_POST['Etapa'])){
 		//OBTENGO LOS DIAS ENTRE SEMANA DONDE HAN ASISTIDO AL MENOS ALGUN ALUMNO
 		$dias = obtenerDiasEntreSemana($mes,$anyo);
 		//OBTENGO EL VALOR DE LA TABLA QUE SE MOSTRARA EN LA VISTA
-		$listado = mostrarTabla($alumnos,$dias,$clase . " (" . $mes .")" );
+		//$listado = mostrarTabla($alumnos,$dias,$clase . " (" . $mes .")" );
+    $listado = mostrarTabla($alumnos, $mes, $anyo, $clase." (" .$mes.")" );
 	}
 }
 require_once $_SERVER['DOCUMENT_ROOT']."/comedorv2/admin/vista/vista_list - copia.php";

@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$_username = strtolower($_POST['user']);
 	$_password = $_POST['password'];
 	if(isset($_POST['botonProfe'])){
-		header('location:/comedorv2/controlador/login_prueba.php');
+		header('location:https://comedorprofes.maristaschamberi.com/user_portal.php');
 		exit();
 	}else{
 		if($_username == 'comedor' && $_password == 'ch2016'){//SI SE HA INTRODUCIDO COMO USUARIO Y PASSWORD LAS SIGUIENTES NOS REDIRIGIRA AL CONTROLADOR MENU
@@ -56,10 +56,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>LOGIN COMEDOR</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-		<link rel="icon" href="/comedorv2/css/corazon_maristas.jpg" type="image/x-icon">
-		<link href="/comedorv2/css/comun.css" rel="stylesheet">
 		<link href="/comedorv2/css/inicio_sesion.css" rel="stylesheet">
-		<link href="/comedorv2/css/responsive_v2.css" rel="stylesheet">
+		<!--<link rel="stylesheet" href="/comedorv2/css/responsive_v2.css">-->
+		<link rel="icon" href="/comedorv2/css/corazon_maristas.jpg" type="image/x-icon">
 		<script type="text/javascript">
 			//CONSTANTE DE LOS OJOS DONDE INDICA EL VALOR OPEN Y VALOR CERRADO
 			const eyeIcons = {
