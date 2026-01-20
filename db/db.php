@@ -1,8 +1,8 @@
 <?php
-	$servername = "pruebas.maristaschamberi.com";
-	$username = "root";
-	$password = "Torci2024@";
-	$database = "comedor";
+	$servername = "localhost";
+	$username   = "user";
+	$password   = "password";
+	$database   = "database";
 
 	try {
 		$conexion = new PDO("mysql:host=$servername;dbname=$database", $username, $password); 	 	 	 	 	 	
